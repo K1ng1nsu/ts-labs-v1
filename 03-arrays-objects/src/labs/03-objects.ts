@@ -6,3 +6,27 @@
  */
 
 // TODO: Book 타입, books 배열, availableBooks 필터링
+
+type Book = {
+  title: string;
+  author: string;
+  publishedYear: string;
+  isAvailable: boolean;
+};
+
+const books: Book[] = [
+  {
+    title: 'Java in use',
+    author: 'Jane Doe',
+    publishedYear: '2000',
+    isAvailable: false,
+  },
+  {
+    title: 'Js in use',
+    author: 'John Doe',
+    publishedYear: '2005',
+    isAvailable: true,
+  },
+];
+
+const availableBooks = books.filter((book) => book.isAvailable);

@@ -7,3 +7,33 @@
  */
 
 // TODO: Lecture 타입, lectures 배열, popularLectures, titleList 완성
+
+type Lecture = {
+  title: string;
+  instructor: string;
+  students: number;
+};
+
+const lectures: Array<Lecture> = [
+  {
+    title: 'How to Get Away with Murder',
+    instructor: 'Annalise Keating',
+    students: 10,
+  },
+  {
+    title: 'Computer Science 101',
+    instructor: 'Jane Doe',
+    students: 15,
+  },
+  {
+    title: 'How LLM works',
+    instructor: 'John Doe',
+    students: 30,
+  },
+];
+
+const popularLectures = lectures.filter((lecture) => lecture.students >= 30);
+const titleList = lectures.map((lecture) => lecture.title);
+
+console.log(popularLectures);
+console.log(titleList);

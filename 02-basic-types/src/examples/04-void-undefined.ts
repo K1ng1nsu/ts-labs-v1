@@ -10,5 +10,5 @@ function getNothing(): undefined {
   return undefined; // 명시적으로 undefined 반환
 }
 
-logMsg("hi!");
+logMsg('hi!');
 console.log(getNothing());

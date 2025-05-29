@@ -6,3 +6,13 @@
  */
 
 // TODO: StudentScore 타입 선언, scores 배열 생성, passed 계산
+
+type StudentScore = [string, number];
+
+const studentScores: StudentScore[] = [
+  ['Wilson', 50],
+  ['Jane', 50],
+  ['John', 80],
+];
+
+const passed = studentScores.filter((StudentScore) => StudentScore[1] >= 70);

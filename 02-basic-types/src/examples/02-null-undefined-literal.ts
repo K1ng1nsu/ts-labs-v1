@@ -9,6 +9,6 @@ canBeUndef = undefined;
 // canBeUndef = null; // (x)
 
 // 리터럴 타입
-let onlyYes: "yes";
-onlyYes = "yes";
+let onlyYes: 'yes';
+onlyYes = 'yes';
 // onlyYes = "no"; // (x)

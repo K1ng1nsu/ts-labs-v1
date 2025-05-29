@@ -8,3 +8,13 @@
 const isEven = (n: number) => n % 2 === 0;
 filterNumbers([1, 2, 3, 4], isEven) // [2, 4]
 */
+
+const filterNumbers = (
+  nums: number[],
+  predicate: (num: number) => boolean
+): number[] => {
+  return nums.filter(predicate);
+};
+
+const isEven = (n: number) => n % 2 === 0;
+filterNumbers([1, 2, 3, 4], isEven); // [2, 4]
