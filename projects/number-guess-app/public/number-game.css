@@ -1,6 +1,6 @@
 body {
   background: #f6f7fb;
-  font-family: "Noto Sans KR", "Pretendard", Arial, sans-serif;
+  font-family: 'Noto Sans KR', 'Pretendard', Arial, sans-serif;
   margin: 0;
   color: #232d41;
   min-height: 100vh;
@@ -112,7 +112,7 @@ body {
   padding: 0 3px;
   color: #565a76;
 }
-.history-list li:last-child {
+.history-list li:first-child {
   color: #1e2358;
   font-weight: 600;
 }
