@@ -18,3 +18,5 @@ const filterNumbers = (
 
 const isEven = (n: number) => n % 2 === 0;
 filterNumbers([1, 2, 3, 4], isEven); // [2, 4]
+
+console.log(filterNumbers([1, 2, 3, 4], isEven));

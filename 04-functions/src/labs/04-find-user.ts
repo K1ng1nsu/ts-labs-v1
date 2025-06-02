@@ -30,3 +30,5 @@ const users = [
 const isActiveUser = (u: User) => u.isActive;
 
 findUser(users, isActiveUser); // { id: 2, name: 'Lee', isActive: true }
+
+console.log(findUser(users, isActiveUser));

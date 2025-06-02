@@ -11,3 +11,5 @@ function sum(numbers: number[]): number {
   return numbers.reduce((sum, num) => sum + num, 0);
 }
 sum([1, 2, 3]); // 6
+
+console.log(sum([1, 2, 3]));

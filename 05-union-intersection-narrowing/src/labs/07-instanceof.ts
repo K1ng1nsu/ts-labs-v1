@@ -4,21 +4,28 @@
 class NotFoundError extends Error {
   constructor(public resource: string) {
     super(`${resource} not found`);
-    this.name = "NotFoundError";
+    this.name = 'NotFoundError';
   }
 }
 class ValidationError extends Error {
   constructor(public field: string) {
     super(`Invalid input for ${field}`);
-    this.name = "ValidationError";
+    this.name = 'ValidationError';
   }
 }
 
 function handleError(err: Error) {
   // 여기에 코드를 작성하세요.
+  if (err instanceof NotFoundError) {
+    console.log(`[404] ${err.name}: ${err.message}`);
+  } else if (err instanceof ValidationError) {
+    console.log(`[400] ${err.name}: ${err.message}`);
+  } else {
+    console.log(`[500] ${err.message}`);
+  }
 }
 
 // 사용 예시
-// handleError(new NotFoundError("User"));
-// handleError(new ValidationError("email"));
-// handleError(new Error("알 수 없는 에러"));
+handleError(new NotFoundError('User'));
+handleError(new ValidationError('email'));
+handleError(new Error('알 수 없는 에러'));

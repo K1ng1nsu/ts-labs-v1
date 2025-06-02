@@ -3,7 +3,7 @@ function fetchData<T>(data: T, delay = 500): Promise<T> {
   return new Promise((resolve) => setTimeout(() => resolve(data), delay));
 }
 
-fetchData<string>("Hello, TS!").then((res) => {
+fetchData<string>('Hello, TS!').then((res) => {
   // res는 string 타입으로 추론됨
 });
 

@@ -17,3 +17,5 @@ const processStrings = (strArr: string[], mapper: Transform): string[] => {
 };
 
 processStrings(['hi', 'bye'], shout); // ['hi!', 'bye!']
+
+console.log(processStrings(['hi', 'bye'], shout));

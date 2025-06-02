@@ -16,3 +16,5 @@ const calculate = (a: number, b: number, operation: Operation): number => {
 
 const add = (a: number, b: number) => a + b;
 calculate(10, 20, add); // 30
+
+console.log(calculate(10, 20, add));

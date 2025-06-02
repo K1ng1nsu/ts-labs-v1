@@ -10,8 +10,8 @@ interface UserInterface {
   name: string;
 }
 
-const userT: UserType = { id: 100, name: "타입" };
-const userI: UserInterface = { id: 200, name: "인터페이스" };
+const userT: UserType = { id: 100, name: '타입' };
+const userI: UserInterface = { id: 200, name: '인터페이스' };
 
 // 2. 확장성 차이 (extends & intersection)
 // 인터페이스: 상속 가능
@@ -21,12 +21,12 @@ interface Animal {
 interface Cat extends Animal {
   color: string;
 }
-const kitty: Cat = { sound: "야옹", color: "흰색" };
+const kitty: Cat = { sound: '야옹', color: '흰색' };
 
 // 타입 별칭: intersection (&)으로 결합
 type AnimalT = { sound: string };
 type CatT = AnimalT & { color: string };
-const kitty2: CatT = { sound: "야옹", color: "검은색" };
+const kitty2: CatT = { sound: '야옹', color: '검은색' };
 
 // 3. 선언적 확장 가능 여부
 // 인터페이스는 동일 이름으로 여러 번 선언해도 자동 합쳐짐
@@ -36,8 +36,7 @@ interface MergeMe {
 interface MergeMe {
   b: string;
 }
-const merged: MergeMe = { a: 1, b: "합쳐짐" };
-
+const merged: MergeMe = { a: 1, b: '합쳐짐' };
 // 타입 별칭은 같은 이름으로 여러 번 선언 불가(에러!)
 // type MergeMe = { a: number }; // (이미 선언되어 있으면 불가)
 

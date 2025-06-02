@@ -4,5 +4,5 @@ function pair<K, V>(key: K, value: V): [K, V] {
 }
 
 // 사용 예시
-const p1 = pair("id", 123); // [string, number]
-const p2 = pair("isAdmin", true); // [string, boolean]
+const p1 = pair('id', 123); // [string, number]
+const p2 = pair('isAdmin', true); // [string, boolean]
