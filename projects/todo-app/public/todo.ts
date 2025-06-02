@@ -27,14 +27,17 @@ dateTitleDiv.textContent = getTodayString();
 
 renderTaskCount();
 
+// 체크박스
 todoListEl.addEventListener('change', (e: Event) => {
   const target = e.target as HTMLInputElement;
   if (target.tagName == 'INPUT' && target.type == 'checkbox') {
     // 체크박스 클릭
     toggleTask(e);
+    target.closest('li')?.classList.toggle('completed');
   }
 });
 
+// 버튼 클릭
 todoListEl.addEventListener('click', (e) => {
   const target = e.target as HTMLButtonElement;
   const targetEl = target.closest('li');

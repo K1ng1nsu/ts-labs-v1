@@ -12,7 +12,7 @@ function getHint(userInput: number, targetNum: number) {
   if (userInput < targetNum) return StatusMassge.UP;
   return StatusMassge.CORRECT;
 }
-function getHistoryElement(
+function createHistoryElement(
   userInput: number,
   targetNum: number
 ): HTMLLIElement {
@@ -57,7 +57,7 @@ guessForm.addEventListener('submit', (e: SubmitEvent) => {
 
   trialCountEl.textContent = `시도: ${trialCount}회`;
 
-  const newHistory = getHistoryElement(userInput, targetNum);
+  const newHistory = createHistoryElement(userInput, targetNum);
   historyListEl.prepend(newHistory);
 
   if (getHint(userInput, targetNum) == StatusMassge.CORRECT) {
